@@ -1,0 +1,39 @@
+@media (max-width:830px) {
+    body{
+        .contenar{
+            .card{
+                flex-direction: column;
+            }
+        }
+    }
+}
+@media (max-width:500px) {
+    .attribution{
+        bottom: 0;
+    }
+    body{
+        align-items: baseline;
+        .project{
+            margin: 0;
+            margin-top: 100px;
+            .contenar{
+                padding: 0;
+                .card{
+                    padding: 20px;
+                    width: 100%;
+                    border-radius: 20px 20px 0px 0px ;
+                    .right-side , .left-side{
+                        width: 100%;
+                    }
+                    .left-side{
+                        .tips-contenar{
+                            .tips{
+                                justify-content: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

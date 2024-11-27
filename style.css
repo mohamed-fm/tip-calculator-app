@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+:root {
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  --moz-appearance: textfield;
+}
+
+.contenar {
+  width: 100%;
+  padding: 0px 15px;
+  display: flex;
+  align-items: self-start;
+  justify-content: center;
+  margin: auto;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .contenar {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .contenar {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .contenar {
+    width: 1170px;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: var(--Light-grayish-cyan);
+  font-family: "space mono";
+  font-weight: 700;
+}
+
+input, button {
+  cursor: pointer;
+}
+
+.active-tip {
+  cursor: default;
+}
+
+.project {
+  margin: 60px 0;
+  width: 100%;
+  position: relative;
+}
+.project::after {
+  content: "SPLI";
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  letter-spacing: 4px;
+  color: var(--Very-dark-cyan);
+}
+.project::before {
+  content: "TTER";
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  letter-spacing: 4px;
+  color: var(--Very-dark-cyan);
+}
+.project .contenar .card {
+  padding: 40px;
+  border-radius: 20px;
+  background-color: var(--White);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.project .contenar .card .left-side {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.project .contenar .card .left-side .bill-contenar, .project .contenar .card .left-side .people-contenar {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.project .contenar .card .left-side .bill-contenar label, .project .contenar .card .left-side .people-contenar label {
+  color: var(--Dark-grayish-cyan);
+  font-size: 14px;
+  position: relative;
+}
+.project .contenar .card .left-side .bill-contenar .error-label, .project .contenar .card .left-side .people-contenar .error-label {
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 0;
+  color: rgba(243, 81, 81, 0.7882352941);
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "space mono";
+}
+.project .contenar .card .left-side .bill-contenar input, .project .contenar .card .left-side .people-contenar input {
+  text-align: right;
+  font-size: 24px;
+  background-color: var(--Very-light-grayish-cyan);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  color: var(--Very-dark-cyan);
+  font-weight: 700;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: left 15px center;
+  font-family: "space mono";
+  border: 2px solid transparent;
+}
+.project .contenar .card .left-side .bill-contenar .error-input, .project .contenar .card .left-side .people-contenar .error-input {
+  border: 2px solid rgba(243, 81, 81, 0.7882352941);
+}
+.project .contenar .card .left-side .bill-contenar input {
+  background-image: url(./images/icon-dollar.svg);
+}
+.project .contenar .card .left-side .people-contenar input {
+  background-image: url(./images/icon-person.svg);
+}
+.project .contenar .card .left-side .tips-contenar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.project .contenar .card .left-side .tips-contenar p {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--Dark-grayish-cyan);
+}
+.project .contenar .card .left-side .tips-contenar .tips {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-width: 365px;
+}
+.project .contenar .card .left-side .tips-contenar .tips .tip {
+  padding: 10px;
+  width: 115px;
+  background-color: var(--Very-dark-cyan);
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "space mono";
+  transition: 0.3s ease-in-out;
+}
+.project .contenar .card .left-side .tips-contenar .tips .tip:hover {
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+}
+.project .contenar .card .left-side .tips-contenar .tips .custom-tip {
+  width: fit-content;
+  background-color: var(--Very-light-grayish-cyan);
+  color: var(--Very-dark-cyan);
+  font-family: "space mono";
+  width: 115px;
+  border: 2px solid transparent;
+}
+.project .contenar .card .left-side .tips-contenar .tips .custom-tip:hover, .project .contenar .card .left-side .tips-contenar .tips .custom-tip:focus {
+  border: 2px solid var(--Strong-cyan);
+  background-color: var(--Very-light-grayish-cyan);
+  color: var(--Very-dark-cyan);
+}
+.project .contenar .card .left-side .tips-contenar .tips .custom-tip.active-tip {
+  border: 2px solid var(--Strong-cyan);
+  background-color: var(--Very-light-grayish-cyan);
+  color: var(--Very-dark-cyan);
+}
+.project .contenar .card .left-side .tips-contenar .tips .active-tip {
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+}
+.project .contenar .card .right-side {
+  background-color: var(--Very-dark-cyan);
+  width: 365px;
+  height: 377px;
+  padding: 40px 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.project .contenar .card .right-side .results .tips-amount {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.project .contenar .card .right-side .results .tips-amount .tip-amount, .project .contenar .card .right-side .results .tips-amount .total-amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--White);
+}
+.project .contenar .card .right-side .results .tips-amount .tip-amount h2, .project .contenar .card .right-side .results .tips-amount .total-amount h2 {
+  font-size: 14px;
+}
+.project .contenar .card .right-side .results .tips-amount .tip-amount h1, .project .contenar .card .right-side .results .tips-amount .total-amount h1 {
+  color: var(--Strong-cyan);
+}
+.project .contenar .card .right-side .results .tips-amount .tip-amount span, .project .contenar .card .right-side .results .tips-amount .total-amount span {
+  color: var(--Grayish-cyan);
+  font-size: 12px;
+}
+.project .contenar .card .right-side button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: "space mono";
+}
+
+@media (max-width: 830px) {
+  body .contenar .card {
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  .attribution {
+    bottom: 0;
+  }
+  body {
+    align-items: baseline;
+  }
+  body .project {
+    margin: 0;
+    margin-top: 100px;
+  }
+  body .project .contenar {
+    padding: 0;
+  }
+  body .project .contenar .card {
+    padding: 20px;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+  }
+  body .project .contenar .card .right-side, body .project .contenar .card .left-side {
+    width: 100%;
+  }
+  body .project .contenar .card .left-side .tips-contenar .tips {
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
